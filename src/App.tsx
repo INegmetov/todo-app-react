@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './App.module.css';
 import {Header} from './components/Header/Header'
+import { TodoList } from './components/TodoList/TodoList';
 import { TodoPanel } from './components/TodoPanel/TodoPanel';
 
 const DEFAULT_TODO_LIST = [
@@ -27,6 +28,7 @@ export const App = ()=>{
         <div className={styles.container}>
           <Header todoCount={todos.length}/>
           <TodoPanel addTodo={addTodo}/>
+          <TodoList todos = {todos}/>
           </div>
 
     </div>
